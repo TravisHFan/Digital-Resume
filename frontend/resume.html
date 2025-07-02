@@ -200,20 +200,27 @@
           (silver medalist of butterfly in the 2014 College Campus Games)
         </p>
       </section>
+      <!-- ...existing code... -->
       <section>
-        <form action="/submit" method="POST" class="contactme">
+        <form id="contactForm" class="contactme">
           <h2>Contact me</h2>
           <div class="input-form">
             <label for="name" class="input-describe">Name:</label>
-            <input name="name" placeholder="Adam Smith" id="name" />
+            <input name="name" placeholder="Adam Smith" id="name" required />
           </div>
           <div class="input-form">
             <label for="email" class="input-describe">Email:</label>
-            <input name="email" placeholder="abc@example.com" id="email" />
+            <input
+              name="email"
+              type="email"
+              placeholder="abc@example.com"
+              id="email"
+              required
+            />
           </div>
           <div class="input-form">
             <label for="organization" class="input-describe"
-              >organization:</label
+              >Organization:</label
             >
             <input
               name="organization"
@@ -227,7 +234,7 @@
           </div>
           <div class="input-form">
             <div class="input-describe">Reason of Contact:</div>
-            <select name="reason">
+            <select name="reason" required>
               <option value="">--Choose Your Reason--</option>
               <option value="OF">Apply an Offer</option>
               <option value="CO">Cooperation</option>
@@ -240,28 +247,29 @@
               If you choose "other", please enter the reason:
             </div>
             <textarea
-              name="other reason"
+              name="otherReason"
               placeholder="please enter here"
             ></textarea>
           </div>
           <p></p>
           <b>Schedule a meeting with me!</b><br />
           <p>Select a meeting date</p>
-          <input type="date" />
-          <p>Select Avaliable Meeting Time</p>
+          <input type="date" name="meetingDate" />
+          <p>Select Available Meeting Time</p>
           <label>
-            <input type="radio" name="time" value="AM" />
+            <input type="radio" name="meetingTime" value="AM" />
             Morning (10:00 a.m. to 12:00 p.m. PST)
           </label>
           <br />
           <label>
-            <input type="radio" name="time" value="PM" />
+            <input type="radio" name="meetingTime" value="PM" />
             Afternoon (2:00 p.m. to 4:00 p.m. PST)
           </label>
           <br />
-          <button type="submit">submit</button>
+          <button type="submit">Submit</button>
         </form>
       </section>
+      <!-- ...existing code... -->
     </main>
 
     <footer></footer>
