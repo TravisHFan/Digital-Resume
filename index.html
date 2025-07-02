@@ -5,6 +5,12 @@
     <title>Travis Fan - Digital Resume</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="Travis Fan, Full Stack Developer, Resume" />
+    <meta
+      name="description"
+      content="Digital Resume of Travis Fan, Full Stack Developer"
+    />
+    <meta name="author" content="Travis Fan" />
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
@@ -16,12 +22,14 @@
       <img src="assets/profile.jpg" alt="Profile Picture" class="profile-pic" />
       <h1>Travis Fan</h1>
       <p class="tagline">
-        Full Stack Engineer | Scholar | Problem Solver | Lifelong Learner
+        Full Stack Developer | Problem Solver | Lifelong Learner | Scholar
       </p>
       <h2>Contact</h2>
-      <p><i class="fa-solid fa-location-dot"></i> Sunnyvale, California</p>
-      <p><i class="fa-solid fa-envelope"></i> travisfanht@gmail.com</p>
-      <p><i class="fa-solid fa-phone"></i> +1 (510) 258-1542</p>
+      <p><i class="fa-solid fa-envelope"></i> &nbsp;travisfanht@gmail.com</p>
+      <p><i class="fa-solid fa-phone"></i> &nbsp;+1 (510) 258-1542</p>
+      <p>
+        <i class="fa-solid fa-location-dot"></i> &nbsp;Sunnyvale, California
+      </p>
     </header>
 
     <main>
@@ -157,23 +165,24 @@
         <h2>Skills</h2>
         <ul class="skills-list">
           <li>Java</li>
+          <li>Spring Framework</li>
           <li>JavaScript</li>
+          <li>TypeScript</li>
           <li>HTML/CSS</li>
+          <li>Git</li>
           <li>SQL</li>
           <li>Shell</li>
           <li>Python</li>
-          <li>React</li>
+          <li>React.js</li>
           <li>Node.js</li>
           <li>Next.js</li>
           <li>Express.js</li>
-          <li>Spring Boot/Cloud</li>
           <li>RESTful API</li>
+          <li>Redis</li>
           <li>Microservices</li>
           <li>Docker</li>
           <li>Kubernetes</li>
           <li>Jenkins</li>
-          <li>Git</li>
-          <li>Redis</li>
           <li>AWS</li>
           <li>Azure</li>
           <li>Vercel</li>
@@ -190,6 +199,68 @@
           Interest: Playing the piano &amp; accordion; Swimming long distance
           (silver medalist of butterfly in the 2014 College Campus Games)
         </p>
+      </section>
+      <section>
+        <form action="/submit" method="POST" class="contactme">
+          <h2>Contact me</h2>
+          <div class="input-form">
+            <label for="name" class="input-describe">Name:</label>
+            <input name="name" placeholder="Adam Smith" id="name" />
+          </div>
+          <div class="input-form">
+            <label for="email" class="input-describe">Email:</label>
+            <input name="email" placeholder="abc@example.com" id="email" />
+          </div>
+          <div class="input-form">
+            <label for="organization" class="input-describe"
+              >organization:</label
+            >
+            <input
+              name="organization"
+              placeholder="Big Company LLC"
+              id="organization"
+            />
+          </div>
+          <div class="input-form">
+            <label for="title" class="input-describe">Title:</label>
+            <input name="title" placeholder="Software tester" id="title" />
+          </div>
+          <div class="input-form">
+            <div class="input-describe">Reason of Contact:</div>
+            <select name="reason">
+              <option value="">--Choose Your Reason--</option>
+              <option value="OF">Apply an Offer</option>
+              <option value="CO">Cooperation</option>
+              <option value="PR">Project</option>
+              <option value="OT">Other</option>
+            </select>
+          </div>
+          <div class="input-form">
+            <div class="input-describe">
+              If you choose "other", please enter the reason:
+            </div>
+            <textarea
+              name="other reason"
+              placeholder="please enter here"
+            ></textarea>
+          </div>
+          <p></p>
+          <b>Schedule a meeting with me!</b><br />
+          <p>Select a meeting date</p>
+          <input type="date" />
+          <p>Select Avaliable Meeting Time</p>
+          <label>
+            <input type="radio" name="time" value="AM" />
+            Morning (10:00 a.m. to 12:00 p.m. PST)
+          </label>
+          <br />
+          <label>
+            <input type="radio" name="time" value="PM" />
+            Afternoon (2:00 p.m. to 4:00 p.m. PST)
+          </label>
+          <br />
+          <button type="submit">submit</button>
+        </form>
       </section>
     </main>
 
