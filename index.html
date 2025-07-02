@@ -5,50 +5,193 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Digital Resume</title>
+    <title>Travis Fan - Digital Resume</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header class="header">
       <img src="assets/profile.jpg" alt="Profile Picture" class="profile-pic" />
-      <h1>Your Name</h1>
+      <h1>Travis Fan</h1>
       <p class="tagline">
         Full Stack Developer | Problem Solver | Lifelong Learner
+      </p>
+      <p>
+        Sunnyvale, California &bull; travisfanht@gmail.com &bull; +1 (510)
+        258-1542
       </p>
     </header>
 
     <main>
       <section class="about">
-        <h2>About Me</h2>
+        <h2>Objective Overview</h2>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Your personal
-          summary here.
+          summary here. Highly motivated and results-driven full-stack developer
+          with a strong ability and keen interest in building both backend and
+          frontend solutions. Seeking a software engineering or developer
+          position that fosters rapid growth while allowing me to leverage my
+          deep foundation in the humanities and arts.
         </p>
+      </section>
+
+      <section class="experience">
+        <h2>Work Experience</h2>
+        <div class="job">
+          <h3>Software Developer - High Sierra Vending</h3>
+          <p class="date">Carson City, NV | Jun 2024 - Present</p>
+          <ul>
+            <li>
+              Developed the entire Web UI for the Pizza Vending Machine
+              Management System using React and Chakra UI, delivering full
+              functionality and ensuring a smooth, user-friendly experience.
+            </li>
+            <li>
+              Independently implemented user authentication, designed and built
+              RESTful APIs using Node.js and Express, and managed MongoDB
+              database interactions to ensure robust, secure, and seamless
+              integration between the front-end and back-end systems.
+            </li>
+            <li>
+              Designed and executed end-to-end testing workflows using tools
+              like Jest and React Testing Library to ensure application
+              reliability and catch regressions during development.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="projects">
+        <h2>Projects</h2>
+        <div class="project">
+          <h3>
+            Microservices Development for Fitness Tracking Data Pipeline System
+            in Java Spring
+          </h3>
+          <p class="date">August 2023</p>
+          <ul>
+            <li>
+              Designed and implemented REST APIs and Microservices Pipeline to
+              publish Fitness Tracking data from wearable device using Java
+              Spring framework, capable of handling 200+ QPS.
+            </li>
+            <li>
+              Built Data Ingestion Microservice to accept, validate &amp;
+              pre-process raw input data from client and publish to RabbitMQ as
+              data buffer &amp; data broker for decoupling.
+            </li>
+            <li>
+              Developed Data Simulator Microservice to test Data APIs, and Data
+              Processor Microservice to subscribe data from RabbitMQ, convert
+              data format, make REST call to Backup Service to securely
+              sync/archive data to AWS S3.
+            </li>
+          </ul>
+        </div>
+        <div class="project">
+          <h3>
+            Spring Development for App Notification Storage, Render and Delivery
+          </h3>
+          <p class="date">February 2023</p>
+          <ul>
+            <li>
+              Architected REST APIs to retrieve and render historical
+              notifications with Spring Boot, set up log monitor system with ELK
+              Stack and health monitor system with Prometheus &amp; Grafana,
+              implemented notification storage with Spring JPA &amp; databases.
+            </li>
+            <li>
+              Interfaced with APNS and Firebase to deliver 10K push notification
+              per day for the growing of DAU (daily active user).
+            </li>
+            <li>
+              Boosted notification retrieve performance with Redis cache, 0.4s
+              latency deduction confirmed.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="education">
+        <h2>Education</h2>
+        <div class="edu">
+          <h3>Purdue University</h3>
+          <p class="date">Oct 2024</p>
+          <p>
+            Professional Education on Artificial Intelligence<br />
+            &bull; Applied Generative AI Specialization program<br />
+            &bull; Microsoft Azure AI Fundamentals: Generative AI
+          </p>
+        </div>
+        <div class="edu">
+          <h3>Zhejiang University</h3>
+          <p class="date">Hangzhou, China | May 2019</p>
+          <p>
+            Ph.D. candidate in Thermal Engineering<br />Thesis: Research on the
+            Ca-based biomass chemical looping gasification system for hydrogen
+            production
+          </p>
+        </div>
+        <div class="edu">
+          <h3>Zhejiang University</h3>
+          <p class="date">Hangzhou, China | Feb 2014</p>
+          <p>
+            MA, Master of Thermal Engineering<br />GPA: 3.5 / 4.0 | Awarded the
+            "First Class Scholarship" for academic excellence in the department
+          </p>
+        </div>
+        <div class="edu">
+          <h3>Tianjin University</h3>
+          <p class="date">Tianjin, China | Jun 2011</p>
+          <p>
+            BS, Bachelor of Thermal Energy and Power Engineering<br />GPA: 3.7 /
+            4.0 | Key contributor to the TJU Formula SAE team's engine division
+            by programming Microcontroller Unit to control race car engine
+            operation
+          </p>
+        </div>
       </section>
 
       <section class="skills">
         <h2>Skills</h2>
         <ul class="skills-list">
+          <li>Java</li>
           <li>JavaScript</li>
           <li>HTML/CSS</li>
+          <li>SQL</li>
+          <li>Shell</li>
+          <li>Python</li>
           <li>React</li>
           <li>Node.js</li>
+          <li>Next.js</li>
+          <li>Express.js</li>
+          <li>Spring Boot/Cloud</li>
+          <li>RESTful API</li>
+          <li>Microservices</li>
+          <li>Docker</li>
+          <li>Kubernetes</li>
+          <li>Jenkins</li>
+          <li>Git</li>
+          <li>Redis</li>
+          <li>AWS</li>
+          <li>Azure</li>
+          <li>Vercel</li>
         </ul>
       </section>
-
-      <section class="experience">
-        <h2>Experience</h2>
-        <!-- repeatable job blocks -->
-        <div class="job">
-          <h3>Frontend Developer - Company XYZ</h3>
-          <p class="date">Jan 2022 - Present</p>
-          <p>Describe your responsibilities and achievements here.</p>
-        </div>
+      <section class="other">
+        <h2>Leadership &amp; Interests</h2>
+        <p>
+          Leadership: Perseverance &amp; Devotion; 7+ years of research team
+          management (team of 4–15 students) and project coordination; 5+ years
+          of media team management (team of 4-6 editors) and lecture hosting
+        </p>
+        <p>
+          Interest: Playing the piano &amp; accordion; Swimming long distance
+          (silver medalist of butterfly in the 2014 College Campus Games)
+        </p>
       </section>
     </main>
 
-    <footer>
-      <p>Contact: your.email@example.com | GitHub | LinkedIn</p>
-    </footer>
+    <footer></footer>
 
     <script src="script.js"></script>
   </body>
