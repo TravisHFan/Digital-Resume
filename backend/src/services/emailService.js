@@ -57,5 +57,11 @@ exports.sendContactNotification = async (contact) => {
     `,
   };
 
-  await transporter.sendMail(mailOptions);
+  await transporter.sendMail(mailOptions, (err, info) => {
+    if (err) {
+      console.error("SMTP Error:", err);
+    } else {
+      console.log("Mail sent success:", info);
+    }
+  });
 };
