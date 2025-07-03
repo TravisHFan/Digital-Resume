@@ -18,6 +18,13 @@
     />
   </head>
   <body>
+    <script>
+      // 根据运行环境切换后端地址
+      const BACKEND_URL =
+        window.location.hostname === "localhost"
+          ? "http://localhost:3001"
+          : "https://your-backend-on-render.com";
+    </script>
     <header class="header">
       <img src="assets/profile.jpg" alt="Profile Picture" class="profile-pic" />
       <h1>Travis Fan</h1>

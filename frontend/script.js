@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Send to backend
         const response = await fetch(
           //使用 fetch 向后端 API 地址发起异步请求，使用 POST 方法。
-          "http://localhost:3001/api/contact/submit",
+          `${BACKEND_URL}/api/contact/submit`,
           {
             method: "POST",
             headers: {
