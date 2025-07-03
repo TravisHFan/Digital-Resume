@@ -45,3 +45,32 @@ This project contains a simple resume website with a Node.js/Express backend for
    ```
 
 Open your browser to `http://localhost:3000/resume.html` to view the resume and use the contact form.
+
+## Deploying on Render
+
+### Backend Web Service
+
+1. Create a new **Web Service** in Render and connect it to this repository.
+2. Set the build command to `npm install` and the start command to `npm start`.
+3. Add the environment variables defined in the `.env` file, for example:
+
+   - `MONGODB_URI`
+   - `EMAIL_USER`
+   - `EMAIL_PASS`
+   - `NOTIFICATION_EMAIL`
+   - `FRONTEND_URL`
+   - `PORT`
+
+### Frontend Static Site
+
+1. Create a **Static Site** on Render pointing to the `frontend/` folder.
+2. No build command is required. Set the publish directory to `frontend/`.
+3. After the site is deployed, copy the generated URL and set it in the backend
+   `FRONTEND_URL` environment variable.
+
+### MongoDB
+
+The backend expects the `MONGODB_URI` variable to contain a connection string.
+You can provision a database using Render's **MongoDB** service or an external
+provider such as MongoDB Atlas. Paste the connection URL into the `MONGODB_URI`
+setting of your backend Web Service.
