@@ -9,12 +9,24 @@ const contactRoutes = require("./routes/contactRoutes");
 
 const app = express();
 
-// Security middleware
-app.use(helmet());
+// More permissive CORS configuration for development
 app.use(
   cors({
-    origin: process.env.FRONTEND_URL || "http://localhost:3000",
-    credentials: true,
+    origin: "*", // Allow all origins for development
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+    credentials: false,
+  })
+);
+
+// Handle preflight requests
+app.options("*", cors());
+
+// Security middleware (less restrictive for development)
+app.use(
+  helmet({
+    crossOriginEmbedderPolicy: false,
+    crossOriginResourcePolicy: false,
   })
 );
 
@@ -29,6 +41,12 @@ app.use("/api/", limiter);
 // Body parsing middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+// Add logging middleware for debugging
+app.use((req, res, next) => {
+  console.log(`${req.method} ${req.path} - Origin: ${req.headers.origin}`);
+  next();
+});
 
 // Routes
 app.use("/api/contact", contactRoutes);
