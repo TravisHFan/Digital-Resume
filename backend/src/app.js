@@ -9,18 +9,25 @@ const contactRoutes = require("./routes/contactRoutes");
 
 const app = express();
 
-// More permissive CORS configuration for development
+// ✅ 更安全的 CORS 配置（替换原来的 origin: "*" 部分）
 app.use(
   cors({
-    origin: "*", // Allow all origins for development
+    origin: process.env.FRONTEND_URL, // ✅ 限定为你的前端地址
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+    credentials: false, // 因你不发送 cookie，可以设为 false
+  })
+);
+
+app.options(
+  "*",
+  cors({
+    origin: process.env.FRONTEND_URL,
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
     credentials: false,
   })
 );
-
-// Handle preflight requests
-app.options("*", cors());
 
 // Security middleware (less restrictive for development)
 app.use(
