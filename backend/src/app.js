@@ -38,6 +38,8 @@ app.use(
 );
 
 // Rate limiting
+app.set("trust proxy", 1); // 估计 Render 是一级代理
+
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
   max: 5, // limit each IP to 5 requests per windowMs
